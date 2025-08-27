@@ -1,9 +1,5 @@
-import { FaTh, FaRegChartBar, FaCommentAlt } from "react-icons/fa";
-import { MdAddLink, MdDriveFileRenameOutline } from "react-icons/md";
-import { AiFillDollarCircle, AiOutlineEye } from "react-icons/ai";
-import { BiEditAlt, BiUserCircle } from "react-icons/bi";
-import { RiPagesLine, RiAdvertisementLine } from "react-icons/ri";
-import { GrDomain } from "react-icons/gr";
+import { FaTh } from "react-icons/fa";
+import { BiUserCircle } from "react-icons/bi";
 
 const menu = [
   {
@@ -11,13 +7,13 @@ const menu = [
     icon: <FaTh />,
     path: "/admin/home",
   },
-
   {
     title: "Account",
     icon: <BiUserCircle />,
-    childrens: [
+    children: [
       {
         title: "Profile",
+        icon: <BiUserCircle />,
         path: "/admin/profile",
       },
       {

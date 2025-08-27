@@ -1,5 +1,4 @@
 import "./Sidebar.scss";
-import React from "react";
 import { useState } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { FaLink } from "react-icons/fa";
