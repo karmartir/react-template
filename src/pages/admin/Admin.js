@@ -3,6 +3,7 @@ import Sidebar from "../../components/admin/sidebar/Sidebar";
 import { Route, Routes } from "react-router-dom";
 import Home from "../../components/admin/home/Home";
 import Profile from "../../components/admin/profile/Profile";
+import Sub from "../../components/admin/subscription/Sub";
 
 const Admin = () => {
   return (
@@ -14,6 +15,7 @@ const Admin = () => {
         <Routes>
           <Route path="home" element={<Home />} />
           <Route path="profile" element={<Profile />} />
+          <Route path="account" element={<Sub />} />
         </Routes>
       </div>
     </div>
