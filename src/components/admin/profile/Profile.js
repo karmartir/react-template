@@ -2,6 +2,7 @@ import "./Profile.scss";
 import Card from "./../../card/Card";
 import { useEffect, useState } from "react";
 import { Spinner } from "../../loader/Loader";
+import { toast } from "react-toastify";
 
 const Profile = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -9,8 +10,13 @@ const Profile = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 500);
   }, [isLoading]);
+
+  const updateProfile = (e) => {
+    e.preventDefault();
+    toast.success("Profile updated successfully.");
+  };
 
   return (
     <div className="profile">
@@ -19,7 +25,7 @@ const Profile = () => {
         {isLoading ? (
           <Spinner />
         ) : (
-          <form>
+          <form onSubmit={updateProfile}>
             <p>
               <label>Name:</label>
               <input type="text" placeholder="Name" name="name" />
@@ -28,7 +34,7 @@ const Profile = () => {
               <label>Email:</label>
               <input type="email" placeholder="Email" name="email" />
             </p>
-            <button className="--btn --btn-primary --btn-block">
+            <button type="submit" className="--btn --btn-primary --btn-block">
               Update Profile
             </button>
           </form>
