@@ -7,6 +7,7 @@ import NotFound from "./pages/404/NotFound";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import Reset from "./pages/auth/Reset";
+import Admin from "./pages/admin/Admin";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/reset" element={<Reset />} />
+        <Route path="/admin/*" element={<Admin />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
